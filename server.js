@@ -11,11 +11,12 @@ app.use(express.static("public"));
 app.use(bodyparser.urlencoded({ extended: true }));
 
 app.get("/", function (req, res) {
-  //res.write(), res.send()
   res.sendFile(__dirname + "/index.html");
 });
 
-app.post("/", function (req, res) {});
+app.post("/", function (req, res) {
+  //res.write(), res.send()
+});
 
 app.listen(3000, function () {
   console.log("Server is running on port 3000");
